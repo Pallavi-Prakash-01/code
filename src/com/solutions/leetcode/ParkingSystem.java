@@ -24,6 +24,23 @@ public class ParkingSystem {
        }
         return false;
     }
+	
+// Approach 2 starts
+	private int[] space = new int[3];
+    public ParkingSystem(int big, int medium, int small) {
+        space[0] = big;
+        space[1] = medium;
+        space[2] = small;
+    }
+    
+    public boolean addCar(int carType) {
+        if(space[carType-1] - 1 < 0){
+            return false;
+        }
+        space[carType-1]--;
+        return true;
+        }
+//Approach 2 ends
 
 	public static void main(String[] args) {
 		ParkingSystem ps = new ParkingSystem(1,2,0);
