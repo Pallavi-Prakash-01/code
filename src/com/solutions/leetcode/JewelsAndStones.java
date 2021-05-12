@@ -20,7 +20,7 @@ public int numJewelsInStones(String jewels, String stones) {
        
        for(char s:stones.toCharArray()){
               if(Jset.contains(s))
-                     answer++;
+                   answer++;
        }
     return answer;          
 }
